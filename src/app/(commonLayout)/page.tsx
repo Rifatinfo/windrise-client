@@ -1,6 +1,7 @@
 
 
 
+// import { StoriesSection } from "@/components/modules/home/blog/StoriesSection";
 import { Hero } from "@/components/modules/home/hero/Hero";
 import Head from "next/head";
 
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero/>
+        {/* <StoriesSection/> */}
       </main>
     </>
   );

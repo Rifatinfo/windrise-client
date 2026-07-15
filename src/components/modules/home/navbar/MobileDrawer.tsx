@@ -334,61 +334,26 @@ function FeaturedCollections({ items }: { items: readonly string[] }) {
     </section>
   )
 }
-// function PromoImage({ category }: { category: NavigationCategory }) {
-//   return (
-//     <a
-//       href="#collection"
-//       aria-label={category.promo.cta}
-//       className="mt-8 block overflow-hidden rounded-md font-dm-sans"
-//     >
-//       <img
-//         src={category.promo.image}
-//         alt={category.promo.imageAlt}
-//         className="aspect-[4/5] w-full object-cover"
-//       />
-      
-//     </a>
-//   )
-// }
-
-
-
-
 function PromoImage({ category }: { category: NavigationCategory }) {
   return (
-      <a
+    <a
       href="#collection"
       aria-label={category.promo.cta}
-      className="relative mt-8 block overflow-hidden rounded-md font-dm-sans"
+      className="mt-8 block overflow-hidden rounded-md font-dm-sans"
     >
-      <Image
-        height={315}
-        width={207}
+      <img
         src={category.promo.image}
         alt={category.promo.imageAlt}
         className="aspect-[4/5] w-full object-cover"
       />
-    
-
-    
+      
     </a>
   )
 }
 
 
 
+             
 
-    //  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-transparent" />
 
-    //   {/* Text content */}
-    //   <div className="absolute inset-x-0 bottom-0 p-6 text-white font-dm-sans">
-    //     <span className="text-xs font-medium tracking-widest uppercase text-white/80">
-    //       FEATURED
-    //     </span>
-    //     <h3 className="mt-1 text-2xl font-semibold">
-    //       Explore the Trend
-    //     </h3>
-    //     <span className="mt-2 inline-flex items-center gap-1 text-sm underline-offset-4">
-    //       Explore <span className="w-0.5" aria-hidden>→</span>
-    //     </span>
-    //   </div> 
+

@@ -1,7 +1,7 @@
 'use client';
 import { ChevronDownIcon } from 'lucide-react';
 import  { useState } from 'react'
-import { FormEvent } from 'react'
+import { FormEvent } from 'react' 
 import {
   FaFacebookF,
   FaInstagram,
@@ -117,7 +117,7 @@ export function Footer() {
                 key={group.title}
                 className={
                   isPayments
-                    ? 'border-y border-[#272727]/70'
+                    ? 'relative border-b border-[#272727]/70 before:absolute before:top-0 before:left-6 before:right-6 before:border-t before:border-[#272727]/70'
                     : 'relative before:absolute before:top-0 before:left-6 before:right-6 before:border-t before:border-[#272727]/70'
                 }
               >

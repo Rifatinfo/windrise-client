@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.cdnfonts.com/css/avegreat');
+                
 @import "tailwindcss";
 
 :root {
@@ -23,6 +25,9 @@
 
 .font-dm-sans {
   font-family: "DM Sans", sans-serif
+}
+.font-avegreat {
+  font-family: 'Avegreat', sans-serif;                                          
 }
 
 

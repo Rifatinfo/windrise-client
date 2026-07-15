@@ -38,15 +38,7 @@ export const navigationData: readonly NavigationCategory[] = [
           'T-Shirts',
           'Polos',
           'Jeans',
-          'Cargo Pants',
-          'Trousers',
-          'Joggers',
-          'Shorts',
-          'Panjabi',
-          'Blazers',
-          'Suits',
-          'Jackets',
-          'Hoodies',
+          'Cargo Pants'
         ],
       },
       {

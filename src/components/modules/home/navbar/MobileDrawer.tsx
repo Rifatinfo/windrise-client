@@ -22,6 +22,7 @@ import {
   NavigationCategoryId,
 } from './Navigationdataset'
 import WhiteLogo from '@/components/shared/logo/WhiteLogo';
+import Image from 'next/image';
 type MobileDrawerProps = {
   isOpen: boolean
   onClose: () => void
@@ -54,22 +55,26 @@ const accountLinks: readonly AccountLink[] = [
     icon: UserRoundIcon,
   },
 ]
-const panelVariants: Variants = {
-  enter: (direction: TransitionDirection) => ({
-    x: direction === 1 ? '-100%' : '28%',
+
+
+const panelVariants : Variants = {
+  enter: (direction : TransitionDirection) => ({
+    x: direction === 1 ? "100%" : "-100%",
   }),
+
   center: {
     x: 0,
     transition: {
-      duration: 0.42,
-      ease: [0.25, 1, 0.5, 1],
+      duration: 0.38,
+      ease: [0.22, 1, 0.36, 1],
     },
   },
-  exit: (direction: TransitionDirection) => ({
-    x: direction === 1 ? '28%' : '100%',
+
+  exit: (direction : TransitionDirection) => ({
+    x: direction === 1 ? "-100%" : "100%",
     transition: {
-      duration: 0.34,
-      ease: [0.25, 1, 0.5, 1],
+      duration: 0.42,
+      ease: [0.22, 1, 0.36, 1],
     },
   }),
 }
@@ -143,7 +148,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               x: '100%',
             }}
             transition={{
-              duration: 0.56,
+              duration: 0.42,
               ease: [0.32, 0.72, 0, 1] as const,
             }}
             className="fixed inset-0 z-[60] flex h-dvh w-screen flex-col overflow-hidden bg-[#080808] text-white font-dm-sans"
@@ -157,7 +162,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             </div>
 
             <div className="relative min-h-0 flex-1 overflow-hidden bg-[#080808]">
-              <AnimatePresence initial={false} custom={direction}>
+              <AnimatePresence initial={false} custom={direction} >
                 {level === 1 ? (
                   <DrawerPanel key="departments" direction={direction}>
                     <DrawerLevelOne onSelectCategory={selectCategory} />
@@ -229,19 +234,9 @@ function DrawerLevelOne({
         
       >
         {navigationData.map((category, index) => (
-          <motion.button
+          <button
             key={category.id}
             type="button"
-            variants={{
-              hidden: {
-                opacity: 0,
-                y: 6,
-              },
-              show: {
-                opacity: 1,
-                y: 0,
-              },
-            }}
             onClick={() => onSelectCategory(category.id)}
             // className="flex w-full items-center justify-between border-b border-white/15 py-5 text-left text-[13px] font-medium font-dm-sans text-white/90 transition hover:text-white"
             className={`
@@ -250,14 +245,14 @@ function DrawerLevelOne({
         text-[#8A8A8A] transition hover:text-white
         ${
           index !== navigationData.length - 1
-            ? "border-b border-[#8A8A8A]"
+            ? "border-b border-[#272727]/70"
             : ""
         }
       `}
           >
             {category.label}
             <ChevronRightIcon size={16} strokeWidth={1.3} />
-          </motion.button>
+          </button>
         ))}
       </motion.nav>
 
@@ -266,9 +261,9 @@ function DrawerLevelOne({
           <a
             key={label}
             href="#account"
-            className="flex items-center gap-2.5 text-[15px] text-[#8A8A8A] transition hover:text-white font-dm-sans"
+            className="flex items-center gap-2.5 text-[15px] text-white transition hover:text-white font-dm-sans"
           >
-            <Icon size={14} strokeWidth={1.35} />
+            <Icon  size={14} strokeWidth={2} />
             {label}
           </a>
         ))}
@@ -292,15 +287,15 @@ function DrawerCategory({
       <button
         type="button"
         onClick={onBack}
-        className="mb-2 flex h-9 items-center gap-1 text-[15px] text-[#707070] transition hover:text-white font-dm-sans"
+        className="mb-6 flex h-9 items-center gap-1 text-[15px] text-[#707070] transition hover:text-white font-dm-sans mt-5 "
       >
         <ChevronLeftIcon size={15} strokeWidth={1.3} />
         {category.label}
       </button>
-
+      <div className="-mx-6 border-b border-[#272727]/70 mb-2 " />
       <nav
         aria-label={`${category.label} subcategories`}
-        className="border-t border-[#707070] font-dm-sans"
+        // className="border-t border-[#707070]/40 font-dm-sans"   // top 
       >
         {category.groups.map((group, index) => (
           <AccordionMenu
@@ -339,18 +334,61 @@ function FeaturedCollections({ items }: { items: readonly string[] }) {
     </section>
   )
 }
+// function PromoImage({ category }: { category: NavigationCategory }) {
+//   return (
+//     <a
+//       href="#collection"
+//       aria-label={category.promo.cta}
+//       className="mt-8 block overflow-hidden rounded-md font-dm-sans"
+//     >
+//       <img
+//         src={category.promo.image}
+//         alt={category.promo.imageAlt}
+//         className="aspect-[4/5] w-full object-cover"
+//       />
+      
+//     </a>
+//   )
+// }
+
+
+
+
 function PromoImage({ category }: { category: NavigationCategory }) {
   return (
-    <a
+      <a
       href="#collection"
       aria-label={category.promo.cta}
-      className="mt-8 block overflow-hidden rounded-md font-dm-sans"
+      className="relative mt-8 block overflow-hidden rounded-md font-dm-sans"
     >
-      <img
+      <Image
+        height={315}
+        width={207}
         src={category.promo.image}
         alt={category.promo.imageAlt}
         className="aspect-[4/5] w-full object-cover"
       />
+    
+
+    
     </a>
   )
 }
+
+
+
+
+    //  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-transparent" />
+
+    //   {/* Text content */}
+    //   <div className="absolute inset-x-0 bottom-0 p-6 text-white font-dm-sans">
+    //     <span className="text-xs font-medium tracking-widest uppercase text-white/80">
+    //       FEATURED
+    //     </span>
+    //     <h3 className="mt-1 text-2xl font-semibold">
+    //       Explore the Trend
+    //     </h3>
+    //     <span className="mt-2 inline-flex items-center gap-1 text-sm underline-offset-4">
+    //       Explore <span className="w-0.5" aria-hidden>→</span>
+    //     </span>
+    //   </div> 

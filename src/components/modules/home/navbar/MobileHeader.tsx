@@ -7,10 +7,9 @@ type MobileHeaderProps = {
 }
 export function MobileHeader({ onMenuOpen }: MobileHeaderProps) {
   return (
-    <div className="flex h-16 items-center justify-between px-5 bg-black">
+    <div className="flex h-16 items-center justify-between px-5 ">
      <WhiteLogo/>
       <div className="flex items-center gap-1">
-        <IconButton icon={SearchIcon} label="Search" />
         <IconButton icon={MenuIcon} label="Open menu" onClick={onMenuOpen} />
       </div>
     </div>

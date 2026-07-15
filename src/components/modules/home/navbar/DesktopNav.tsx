@@ -18,7 +18,7 @@ export function DesktopNav({
   return (
     <nav
       aria-label="Primary navigation"
-      className="flex items-center gap-9 xl:gap-12 "
+      className="flex items-center gap-9 xl:gap-16 md:gap-16"
     >
       {navigationData.map((category : any) => (
         <NavItem
@@ -34,3 +34,5 @@ export function DesktopNav({
     </nav>
   )
 }
+
+

@@ -6,7 +6,7 @@ import Link from "next/link";
 const WhiteLogo = () => {
    return (
         <Link href="/">
-            <Image  src="/assets/Logo_White.svg" width={140} height={26} alt=''></Image>
+            <Image className="w-32 h-auto"  src="/assets/Logo_White.svg" width={140} height={26} alt=''></Image>
         </Link>
     );
 };

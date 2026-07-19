@@ -22,7 +22,7 @@ import {
   NavigationCategoryId,
 } from './Navigationdataset'
 import WhiteLogo from '@/components/shared/logo/WhiteLogo';
-import Image from 'next/image';
+
 type MobileDrawerProps = {
   isOpen: boolean
   onClose: () => void
@@ -153,7 +153,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             }}
             className="fixed inset-0 z-[60] flex h-dvh w-screen flex-col overflow-hidden bg-[#080808] text-white font-dm-sans"
           >
-            <div className="relative z-20 flex h-20 shrink-0 items-center justify-between bg-[#080808] px-5">
+            <div className="relative z-20 flex h-16 shrink-0 items-center justify-between bg-[#080808] px-5">
               <WhiteLogo/>
               <div className="flex items-center gap-1">
                 <IconButton icon={SearchIcon} label="Search" />

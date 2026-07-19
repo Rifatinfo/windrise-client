@@ -80,7 +80,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="hidden border-t border-[#272727]/70 px-6 py-5 md:flex md:items-center md:justify-between md:px-20 lg:px-20  font-dm-sans">
+      <div className="hidden border-t border-[#272727]/70 px-6 py-5 md:flex md:items-center md:justify-between md:px-20 lg:px-20  font-dm-sans mb-8">
         <p className="text-xs text-zinc-500">
           © 2026 Windrise. All rights reserved.
         </p>
@@ -153,7 +153,7 @@ export function Footer() {
                       <img
                         src={PAYMENT_GATEWAY_URL}
                         alt="Accepted payment methods"
-                        className="h-auto w-40"
+                        className="h-auto w-40  mx-auto"
                       />
                     )}
                   </div>
@@ -163,7 +163,7 @@ export function Footer() {
           })}
         </div>
 
-        <div className="px-6 py-7 text-center  font-dm-sans">
+        <div className="px-6 py-7 text-center  font-dm-sans mb-10">
           <p className="text-[10px] text-zinc-500">
             © 2026 Windrise. All rights reserved.
           </p>
@@ -270,7 +270,7 @@ function DesktopLinkGroup({ group }: { group: FooterGroup }) {
         <img
           src={PAYMENT_GATEWAY_URL}
           alt="Accepted payment methods"
-          className="mt-4 h-auto w-[186px]"
+          className="mt-4 h-auto w-[198px]"
         />
       )}
     </section>

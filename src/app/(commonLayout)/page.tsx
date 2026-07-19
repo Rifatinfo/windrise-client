@@ -4,7 +4,7 @@
 
 import { StoriesSection } from "@/components/modules/home/blog/StoriesSection";
 import { Hero } from "@/components/modules/home/hero/Hero";
-import { HeroMiniwuin } from "@/components/modules/home/miniquinSlide/MiniquinHero";
+import { MiniquinHero } from "@/components/modules/home/miniquinSlide/MiniquinHero";
 import { CollectionShowcase } from "@/components/modules/home/showCase/CollectionShowcase";
 import WindriseHero from "@/components/modules/home/showCase/WindriseHero";
 import Head from "next/head";
@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero/>
-        <HeroMiniwuin />
+        <MiniquinHero />
         <CollectionShowcase/>
         <WindriseHero/>
         <StoriesSection/>

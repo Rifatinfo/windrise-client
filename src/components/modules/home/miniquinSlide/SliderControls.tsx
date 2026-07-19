@@ -1,5 +1,5 @@
 
-import React from 'react'
+
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 
 interface SliderControlsProps {

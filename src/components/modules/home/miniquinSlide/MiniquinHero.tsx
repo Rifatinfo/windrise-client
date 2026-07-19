@@ -3,10 +3,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRightIcon } from 'lucide-react'
-import { ringOffset, wrapIndex } from './data/slide'
-import { MODELS } from './data/model'
+
 import { ModelCard } from './ModelCard'
 import { SliderControls } from './SliderControls'
+import { MODELS } from './data/model'
+import { ringOffset, wrapIndex } from './data/slide'
 
 function useCanvasScale() {
   const [canvasScale, setCanvasScale] = useState(1)
@@ -22,7 +23,7 @@ function useCanvasScale() {
   return canvasScale
 }
 
-export function HeroMiniwuin() {
+export function MiniquinHero() {
   const total = MODELS.length
   const [active, setActive] = useState(0)
   const canvasScale = useCanvasScale()
@@ -66,13 +67,13 @@ export function HeroMiniwuin() {
     >
       <div className="relative mx-auto h-[max(700px,69.63vw)] max-h-[1183px] min-h-[700px] w-full max-w-[1699px]">
         <img
-          src="/assets/connect.png"
+          src="https://cdn.magicpatterns.com/uploads/pcYuZzWurcX13sKSTL5zCX/connect.png"
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute left-[4.3%] top-[18.1%] z-0 w-[36%] select-none opacity-[0.1]"
         />
         <img
-          src="/assets/W.svg"
+          src="https://cdn.magicpatterns.com/uploads/dhbGLHSMuu9HSs3nKXbDvm/W.svg"
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-[28%] z-0 w-[48%] -translate-x-1/2 select-none opacity-[0.12]"

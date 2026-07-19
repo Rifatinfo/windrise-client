@@ -1,4 +1,5 @@
 'use client';
+
 import { motion } from 'framer-motion'
 import { ModelItem } from './data/model'
 import { cardStyle, SPRING } from './data/slide'
@@ -14,7 +15,9 @@ interface ModelCardProps {
 export function ModelCard({ model, distance, canvasScale, onSelect }: ModelCardProps) {
   const { x, y, scale, opacity, blur, zIndex } = cardStyle(distance, canvasScale)
   const isActive = distance === 0
-  const finalScale = scale * model.imageScale
+  // Every selected look uses the same full-size hero treatment as model 01.
+  // Individual source-image balancing is retained only for supporting positions.
+  const finalScale = isActive ? 1 : scale * model.imageScale
 
   return (
     <motion.button

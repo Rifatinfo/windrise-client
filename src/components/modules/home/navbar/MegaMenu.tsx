@@ -273,7 +273,7 @@ type MenuColumnProps = {
 function MenuColumn({ title, items }: MenuColumnProps) {
   return (
     <div>
-      <h3 className="mb-4 w-80 border-b border-[#707070] pb-2  font-medium text-[#707070] font-dm-sans">
+      <h3 className="mb-4 w-86 border-b border-[#707070] pb-2  font-medium text-[#707070] font-dm-sans">
         {title}
       </h3>
 

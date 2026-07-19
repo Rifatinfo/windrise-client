@@ -1,50 +1,198 @@
-// import React from 'react'
-// const PORTRAIT_IMAGE_URL =
-//   'https://cdn.magicpatterns.com/uploads/au6CpUQi3HeWbpfYG1z9AW/Image_1.png'
-// const FOLDED_CLOTHES_IMAGE_URL =
-//   'https://cdn.magicpatterns.com/uploads/7vKxN7vA83keiTAmqNSy94/Image_2.png'
+
+// import Image from "next/image"
+
+// const PORTRAIT_IMAGE_URL = '/assets/Image 1.png'
+// const FOLDED_CLOTHES_IMAGE_URL = '/assets/Image 2.png'
+
 // export function StoriesSection() {
 //   return (
 //     <section
-//       className="w-full bg-gradient-to-b from-white via-[#F2F4F0] to-white"
-//       aria-labelledby="stories-heading"
-//     >
-//       <div className="mx-auto flex flex-col px-[15px] py-9 sm:px-8 md:min-h-[974px] md:flex-row md:items-center md:gap-10 md:px-16 md:py-20 lg:max-w-[974px] lg:gap-0 lg:px-0">
-//         <div className="w-full shrink-0 md:w-[31%] lg:w-[250px] lg:pr-[70px]">
-//           <h2
-//             id="stories-heading"
-//             className="max-w-[230px] text-[15px] font-medium leading-[1.18] tracking-[-0.02em] text-[#B3A08E] sm:text-[17px]"
-//           >
-//             Stories behind every
-//             <br />
-//             stitch.
-//           </h2>
-//           <div className="mt-3 h-px w-9 bg-[#B3A08E]" aria-hidden="true" />
-//           <p className="mt-5 max-w-[266px] text-[10px] leading-[1.35] text-black sm:text-[11px]">
-//             Discover thoughtful articles on craftsmanship, styling, fabrics and
-//             the ideas that shape the world of Windrise.
-//           </p>
-//           <a
-//             href="#stories"
-//             className="mt-6 inline-flex border-b border-black pb-px text-[9px] font-semibold leading-none text-black transition-opacity hover:opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black sm:text-[10px]"
-//           >
-//             Explore Stories
-//           </a>
-//         </div>
+//   className="w-full bg-[linear-gradient(180deg,#FFFFFF_0%,#F2F4F0_95%,#FFFFFF_100%)]"
+//   aria-labelledby="stories-heading"
+// >
+//   <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-20 md:py-20 lg:max-w-7xl">
+//     <div className="w-full shrink-0 md:w-[31%] lg:w-[550px] lg:pr-[70px]">
+//       <h2
+//         id="stories-heading"
+//         className="w-full text-xl font-medium leading-[1.18] text-[#B3A08E] md:text-3xl font-dm-sans"
+//       >
+//         Stories behind every
+//         <br />
+//         stitch.
+//       </h2>
+//       <div className="mt-3 h-0.5 w-16 bg-[#B3A08E]" aria-hidden="true" />
+//       <p className="mt-10 text-[14px] leading-[1.35] text-black md:text-[16px] font-dm-sans">
+//         Discover thoughtful articles on craftsmanship, styling, fabrics and
+//         the ideas that shape the world of Windrise.
+//       </p>
+//       <a
+//         href="#stories"
+//         className="mt-10 inline-flex border-b border-black pb-px text-[11px] font-semibold leading-none text-black transition-opacity hover:opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black md:text-[14px] font-dm-sans"
+//       >
+//         Explore Stories
+//       </a>
+//     </div>
 
-//         <div className="mt-5 flex w-full items-start gap-2.5 sm:mt-8 sm:gap-4 md:mt-0 md:w-[69%] md:gap-5 lg:w-auto lg:gap-[18px]">
-//           <img
-//             src={PORTRAIT_IMAGE_URL}
-//             alt="Two men wearing Windrise looks against a burgundy backdrop"
-//             className="h-auto w-[48.4%] object-cover md:w-[49%] lg:w-[195px]"
-//           />
-//           <img
-//             src={FOLDED_CLOTHES_IMAGE_URL}
-//             alt="Folded olive knitwear and blue denim on a leather chair"
-//             className="mt-[18px] aspect-square w-[51.6%] object-cover md:mt-[46px] md:w-[51%] lg:mt-[46px] lg:w-[190px]"
-//           />
-//         </div>
-//       </div>
-//     </section>
+//     <div className="mt-5 flex w-full min-w-0 items-start gap-2.5 sm:mt-8 sm:gap-4 md:mt-0 md:w-[69%] md:gap-5 lg:w-auto lg:flex-shrink-0 lg:gap-[18px]">
+//       <Image
+//         width={340}
+//         height={493}
+//         src={PORTRAIT_IMAGE_URL}
+//         alt="Two men wearing Windrise looks against a burgundy backdrop"
+//         className="h-auto w-[48.6%] min-w-0 object-cover md:w-[48%] lg:w-[340px] rounded-sm"
+//       />
+//       <Image
+//         width={333}
+//         height={326}
+//         src={FOLDED_CLOTHES_IMAGE_URL}
+//         alt="Folded olive knitwear and blue denim on a leather chair"
+//         className="mt-[18px] aspect-square w-[48%] min-w-0 object-cover md:mt-[46px] md:w-[51%] lg:mt-[46px] lg:w-[333px] rounded-sm"
+//       />
+//     </div>
+//   </div>
+// </section>
 //   )
 // }
+
+
+
+
+
+"use client"
+
+import Image from "next/image"
+import { useRef, useState, type MouseEvent } from "react"
+import DetailsContactSection from "../letsConnect/DetailsContactSection"
+
+const PORTRAIT_IMAGE_URL = '/assets/Image 1.png'
+const FOLDED_CLOTHES_IMAGE_URL = '/assets/Image 2.png'
+
+interface TiltState {
+  rotateX: number
+  rotateY: number
+  translateX: number
+  translateY: number
+}
+
+const RESET_TILT: TiltState = { rotateX: 0, rotateY: 0, translateX: 0, translateY: 0 }
+
+// Wraps an image and tracks cursor position inside it to drive a
+// subtle 3D tilt + parallax shift + scale, eased with CSS transitions.
+function TiltImage({
+  className,
+  wrapperClassName,
+  ...imageProps
+}: {
+  className: string
+  wrapperClassName: string
+} & React.ComponentProps<typeof Image>) {
+  const [tilt, setTilt] = useState<TiltState>(RESET_TILT)
+  const [hovered, setHovered] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const el = ref.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const px = (e.clientX - rect.left) / rect.width // 0 -> 1
+    const py = (e.clientY - rect.top) / rect.height // 0 -> 1
+
+    const MAX_ROTATE = 6 // deg
+    const MAX_TRANSLATE = 8 // px
+
+    setTilt({
+      rotateY: (px - 0.5) * MAX_ROTATE * 2,
+      rotateX: -(py - 0.5) * MAX_ROTATE * 2,
+      translateX: (px - 0.5) * MAX_TRANSLATE * 2,
+      translateY: (py - 0.5) * MAX_TRANSLATE * 2,
+    })
+  } 
+
+  const handleMouseEnter = () => setHovered(true)
+  const handleMouseLeave = () => {
+    setHovered(false)
+    setTilt(RESET_TILT)
+  }
+
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`overflow-hidden [perspective:900px] ${wrapperClassName}`}
+    >
+      <div
+        style={{
+          transform: hovered
+            ? `translate3d(${tilt.translateX}px, ${tilt.translateY}px, 0) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) scale(1.06)`
+            : `translate3d(0,0,0) rotateX(0) rotateY(0) scale(1)`,
+          transition: hovered
+            ? "transform 120ms ease-out"
+            : "transform 500ms cubic-bezier(0.22, 1, 0.36, 1)",
+          transformStyle: "preserve-3d",
+          willChange: "transform",
+        }}
+        className="h-full w-full"
+      >
+        <Image {...imageProps} className={className} />
+      </div>
+    </div>
+  )
+}
+
+export function StoriesSection() {
+  return (
+    <section
+      className="w-full bg-[linear-gradient(180deg,#FFFFFF_0%,#F2F4F0_95%,#FFFFFF_100%)]"
+      aria-labelledby="stories-heading"
+    >
+      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:max-w-7xl">
+        <div className="w-full shrink-0 md:w-[36%] lg:w-[550px] lg:pr-[70px]">
+          <h2
+            id="stories-heading"
+            className="w-full text-xl font-medium leading-[1.18] text-[#B3A08E] md:text-2xl lg:text-3xl font-dm-sans"
+          >
+            Stories behind every
+            <br />
+            stitch.
+          </h2>
+          <div className="mt-3 h-0.5 w-16 bg-[#B3A08E]" aria-hidden="true" />
+          <p className="mt-6 md:mt-8 lg:mt-10 text-[14px] leading-[1.35] text-black md:text-[15px] lg:text-[16px] font-dm-sans">
+            Discover thoughtful articles on craftsmanship, styling, fabrics and
+            the ideas that shape the world of Windrise.
+          </p>
+          <a
+            href="#stories"
+            className="mt-6 md:mt-8 lg:mt-10 inline-flex border-b border-black pb-px text-[11px] font-semibold leading-none text-black transition-opacity hover:opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black md:text-[13px] lg:text-[14px] font-dm-sans"
+          >
+            Explore Stories
+          </a>
+        </div>
+
+        <div className="mt-5 flex w-full min-w-0 items-start gap-2.5 sm:mt-8 sm:gap-4 md:mt-0 md:w-[64%] md:gap-4 lg:w-auto lg:flex-shrink-0 lg:gap-[18px]">
+          <TiltImage
+            width={340}
+            height={493}
+            src={PORTRAIT_IMAGE_URL}
+            alt="Two men wearing Windrise looks against a burgundy backdrop"
+            wrapperClassName="w-[48.6%] min-w-0 rounded-sm md:w-[48%] lg:w-[340px]"
+            className="h-auto w-full object-cover rounded-sm"
+          />
+          <TiltImage
+            width={333}
+            height={326}
+            src={FOLDED_CLOTHES_IMAGE_URL}
+            alt="Folded olive knitwear and blue denim on a leather chair"
+            wrapperClassName="mt-[18px] aspect-square w-[48%] min-w-0 rounded-sm md:mt-[46px] md:w-[51%] lg:mt-[46px] lg:w-[333px]"
+            className="h-full w-full object-cover rounded-sm"
+          />
+        </div>
+      </div>
+
+
+      {/* lets' connect */}
+      <DetailsContactSection/>
+    </section>
+  )
+}

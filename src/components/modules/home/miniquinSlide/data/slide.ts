@@ -26,11 +26,12 @@ export function wrapIndex(index: number, total: number): number {
  */
 export function cardStyle(distance: number, canvasScale: number) {
   const slots: Record<number, { x: number; y: number; scale: number; zIndex: number }> = {
-    '-2': { x: -318, y: -50, scale: 0.61, zIndex: 50 },
-    '-1': { x: -172, y: -108, scale: 0.63, zIndex: 60 },
-    '0': { x: 0, y: 0, scale: 1, zIndex: 100 },
-    '1': { x: 172, y: -108, scale: 0.63, zIndex: 60 },
-    '2': { x: 318, y: -50, scale: 0.61, zIndex: 50 },
+    // Outer side looks are deliberately larger than the elevated middle pair.
+    '-2': { x: -318, y: -32, scale: 0.72, zIndex: 50 },
+    '-1': { x: -172, y: -108, scale: 0.58, zIndex: 60 },
+    '0': { x: 0, y: 70, scale: 1, zIndex: 100 },
+    '1': { x: 172, y: -108, scale: 0.58, zIndex: 60 },
+    '2': { x: 318, y: -32, scale: 0.72, zIndex: 50 },
   }
   const slot = slots[distance] ?? slots[distance < 0 ? -2 : 2]
   const isActive = distance === 0
@@ -40,7 +41,8 @@ export function cardStyle(distance: number, canvasScale: number) {
     y: slot.y * canvasScale,
     scale: slot.scale,
     opacity: isActive ? 1 : distance === -1 || distance === 1 ? 0.82 : 0.76,
-    blur: isActive ? 0 : distance === -1 || distance === 1 ? 0.45 : 0.8,
+    // Every cutout stays crisp; depth is communicated by size and layering alone.
+    blur: 0,
     zIndex: slot.zIndex,
   }
 }

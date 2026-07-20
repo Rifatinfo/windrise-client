@@ -8,26 +8,28 @@ interface SliderControlsProps {
 }
 
 export function SliderControls({ onPrev, onNext }: SliderControlsProps) {
-  const base =
-    'group absolute top-1/2 z-[200] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/60 text-ink/70 backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-ink hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-beige'
-
+ 
+const base =
+  'group absolute bottom-1 z-[200] flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-full border border-[#E3DFD6] bg-[linear-gradient(180deg,#FFFFFF_0%,#E3DFD6_100%)] text-[#7D7B76] shadow-[0_2px_6px_rgba(0,0,0,0.08)] transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_12px_rgba(0,0,0,0.12)] active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E3DFD6] sm:bottom-auto sm:top-1/2 sm:h-[33px] sm:w-[33px] sm:-translate-y-1/2'
   return (
     <>
       <button
         type="button"
         onClick={onPrev}
+        onPointerDown={(event) => event.stopPropagation()}
         aria-label="Previous model"
         title="Previous look"
-        className={`${base} left-[8%] sm:left-[10%]`}
+        className={`${base} left-[7%] sm:left-[10%]`}
       >
         <ChevronLeftIcon className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-0.5" />
       </button>
       <button
         type="button"
         onClick={onNext}
+        onPointerDown={(event) => event.stopPropagation()}
         aria-label="Next model"
         title="Next look"
-        className={`${base} right-[8%] sm:right-[10%]`}
+        className={`${base} right-[7%] sm:right-[10%]`}
       >
         <ChevronRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" />
       </button>

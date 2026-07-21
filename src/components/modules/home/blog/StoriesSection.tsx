@@ -63,6 +63,7 @@
 import Image from "next/image"
 import { useRef, useState, type MouseEvent } from "react"
 import DetailsContactSection from "../letsConnect/DetailsContactSection"
+import Link from "next/link"
 
 const PORTRAIT_IMAGE_URL = '/assets/Image 1.png'
 const FOLDED_CLOTHES_IMAGE_URL = '/assets/Image 2.png'
@@ -147,7 +148,7 @@ export function StoriesSection() {
       className="w-full bg-[linear-gradient(180deg,#FFFFFF_0%,#F2F4F0_95%,#FFFFFF_100%)]"
       aria-labelledby="stories-heading"
     >
-      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:max-w-7xl">
+      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:px-20 md:px-20 lg:ml-50 md:ml-50">
         <div className="w-full shrink-0 md:w-[36%] lg:w-[550px] lg:pr-[70px]">
           <h2
             id="stories-heading"
@@ -163,18 +164,34 @@ export function StoriesSection() {
             the ideas that shape the world of Windrise.
           </p>
           <a
-            href="#stories"
-            className="mt-6 md:mt-8 lg:mt-10 inline-flex border-b border-black pb-px text-[11px] font-semibold leading-none text-black transition-opacity hover:opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black md:text-[13px] lg:text-[14px] font-dm-sans"
-          >
-            Explore Stories
+                    href="#"
+                    className="group inline-flex items-center gap-2  border-transparent pb-0.5 text-[13.5px] font-medium text-[#1C1B1A] transition-[gap] duration-200 hover:gap-3 hover:border-[#1C1B1A] sm:text-[15px] mt-10"
+                  >
+                     Explore Stories
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    >
+                      <path
+                        d="M6 3.5L10.5 8L6 12.5"
+                        stroke="currentColor"
+                        strokeWidth="1.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
           </a>
+           
         </div>
 
-        <div className="mt-5 flex w-full min-w-0 items-start gap-2.5 sm:mt-8 sm:gap-4 md:mt-0 md:w-[64%] md:gap-4 lg:w-auto lg:flex-shrink-0 lg:gap-[18px]">
+        <div className="mt-5  flex w-full min-w-0 items-start gap-2.5 sm:mt-8 sm:gap-4 md:mt-0 md:w-[64%] md:gap-4 lg:w-auto lg:flex-shrink-0 lg:gap-[18px]">
           <TiltImage
             width={340}
             height={493}
-            src={PORTRAIT_IMAGE_URL}
+            src="/assets/Image-1.png"
             alt="Two men wearing Windrise looks against a burgundy backdrop"
             wrapperClassName="w-[48.6%] min-w-0 rounded-sm md:w-[48%] lg:w-[340px]"
             className="h-auto w-full object-cover rounded-sm"
@@ -182,9 +199,9 @@ export function StoriesSection() {
           <TiltImage
             width={333}
             height={326}
-            src={FOLDED_CLOTHES_IMAGE_URL}
+            src="/assets/Image-2.png"
             alt="Folded olive knitwear and blue denim on a leather chair"
-            wrapperClassName="mt-[18px] aspect-square w-[48%] min-w-0 rounded-sm md:mt-[46px] md:w-[51%] lg:mt-[46px] lg:w-[333px]"
+            wrapperClassName="mt-[28px] aspect-square w-[48%] min-w-0 rounded-sm md:mt-[46px] md:w-[51%] lg:mt-[80px] lg:w-[333px]"
             className="h-full w-full object-cover rounded-sm"
           />
         </div>

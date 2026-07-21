@@ -1,15 +1,28 @@
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import React from 'react'
-import { BiLeftArrow } from 'react-icons/bi'
-import { LuArrowLeft } from 'react-icons/lu'
+
 
 const LIFESTYLE_IMAGE_URL ='/assets/young-boy.png'
 const MANNEQUIN_IMAGE_URL ='/assets/Mannequin.png'
 
 export function CollectionShowcase() {
   return (
-    <section className="w-full bg-white" aria-label="Windrise collection showcase" >
-      <div className="grid grid-cols-1 bg-white lg:grid-cols-[62%_38%]">
+    <section 
+    className="relative w-full bg-warmwhite" 
+    
+//  style={{
+//         background:
+//           "linear-gradient(to bottom, #f5f1ea 0%, #faf8f5 35%, #fdfcfb 60%, #ffffff 100%)",
+//       }}
+style={{
+  background:
+    "linear-gradient(to bottom, #f0ede6 0%, #f5f2ec 0%, #faf8f5 65%, #ffffff 100%)",
+}}
+
+    aria-label="Windrise collection showcase" >
+       {/* Fade to white */}
+
+      <div className="grid grid-cols-1  lg:grid-cols-[62%_38%]">
+
         <article className="relative mx-[15px] mt-[15px] h-[317px] overflow-hidden rounded-[3px] lg:mx-0 -ml-8 lg:mt-0 lg:h-[1080px] lg:rounded-[9px]">
           <img
             src={LIFESTYLE_IMAGE_URL}
@@ -31,7 +44,8 @@ export function CollectionShowcase() {
           </div>
         </article>
 
-        <article className="relative mx-[15px] h-[405px] overflow-hidden bg-white -ml-8 md:ml-0 lg:mx-0 lg:h-[1233px] font-dm-sans">
+        <article className="relative mx-[15px] h-[405px] overflow-hidden  -ml-8 md:ml-0 lg:mx-0 lg:h-[1233px] font-dm-sans"
+        >
           <img
             src={MANNEQUIN_IMAGE_URL}
             alt="Mannequin in a gray sweatshirt and joggers"
@@ -60,6 +74,9 @@ export function CollectionShowcase() {
           </div>
         </article>
       </div>
+
+
+
     </section>
   )
 }

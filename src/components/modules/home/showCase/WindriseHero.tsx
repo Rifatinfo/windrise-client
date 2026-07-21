@@ -8,18 +8,20 @@ export default function WindriseHero() {
       style={{
     background: "linear-gradient(to top, #EAE4DF 0%, #FFFFFF 100%)",
   }}
+
+  // style={{ background: 'radial-gradient(120% 100% at 50% 22%, #fffefd 0%, #f8f6f2 63%, #f0ede6 100%)' }}
     >
-      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:max-w-7xl">
+      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:px-20 md:px-20">
       {/* Image */}
       <div
         className="
           order-1 w-full pt-4
-          md:order-2 md:w-1/2 md:pt-0  md:-mr-20
+          md:order-2 md:w-1/2 md:pt-0  
         "
       >
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[6px] bg-[#DAD5CF] sm:aspect-[880/450] sm:rounded-[9px]">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[3px] md:rounded-[9px] lg:rounded-[9px] bg-[#DAD5CF] sm:aspect-[880/450] ">
           <Image
-            src="/assets/sunglass-boy.png"
+            src="/assets/three-person-2.png"
             alt="Windrise model wearing a striped shirt and jeans"
             fill
             priority
@@ -30,7 +32,7 @@ export default function WindriseHero() {
       </div>
 
       {/* Text content */}
-      <div className="order-2 max-w-full pt-6 md:order-1 md:w-1/2 md:max-w-[460px] md:pt-0">
+      <div className="order-2 max-w-full pt-6 md:order-1 md:w-1/2 md:max-w-[460px] md:pt-0 lg:ml-50 md:ml-50">
         <h1 className="mb-5 text-[22px] font-medium leading-[1.15] tracking-tight text-[#1C1B1A] sm:text-[32px] lg:text-[40px]">
           Simple forms
           <br />

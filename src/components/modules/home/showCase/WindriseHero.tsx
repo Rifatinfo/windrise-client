@@ -6,16 +6,15 @@ export default function WindriseHero() {
   return (
     <section
       style={{
-    background: "linear-gradient(to top, #EAE4DF 0%, #FFFFFF 100%)",
+    background: "linear-gradient(to top, #EAE4DF 63%, #FFFFFF 100%)",
   }}
 
-  // style={{ background: 'radial-gradient(120% 100% at 50% 22%, #fffefd 0%, #f8f6f2 63%, #f0ede6 100%)' }}
     >
-      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-16 lg:py-20 lg:px-20 md:px-20">
+      <div className="mx-auto flex flex-col px-6 pb-9 lg:pb-12 lg:-mt-14 md:-mt-14 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 lg:px-19 md:px-19">
       {/* Image */}
       <div
         className="
-          order-1 w-full pt-4
+          order-1 w-full 
           md:order-2 md:w-1/2 md:pt-0  
         "
       >
@@ -23,10 +22,11 @@ export default function WindriseHero() {
           <Image
             src="/assets/three-person-2.png"
             alt="Windrise model wearing a striped shirt and jeans"
-            fill
+            width={880}
+            height={450}
             priority
-            sizes="(max-width: 640px) 100vw, 60vw"
-            className="object-cover object-[center_8%] sm:object-[center_15%]"
+            // sizes="(max-width: 640px) 100vw, 60vw"
+            className="object-cover object-[center_8%] sm:object-[center_15%] md:w-[880px] lg:w-[880px] h-full"
           />
         </div>
       </div>

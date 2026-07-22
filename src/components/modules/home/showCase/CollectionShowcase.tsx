@@ -9,21 +9,12 @@ export function CollectionShowcase() {
     <section 
     className="relative w-full bg-warmwhite" 
     
-//  style={{
-//         background:
-//           "linear-gradient(to bottom, #f5f1ea 0%, #faf8f5 35%, #fdfcfb 60%, #ffffff 100%)",
-//       }}
-style={{
-  background:
-    "linear-gradient(to bottom, #f0ede6 0%, #f5f2ec 0%, #faf8f5 65%, #ffffff 100%)",
-}}
-
     aria-label="Windrise collection showcase" >
        {/* Fade to white */}
 
       <div className="grid grid-cols-1  lg:grid-cols-[62%_38%]">
 
-        <article className="relative mx-[15px] mt-[15px] h-[317px] overflow-hidden rounded-[3px] lg:mx-0 -ml-8 lg:mt-0 lg:h-[1080px] lg:rounded-[9px]">
+        <article className="relative mx-[15px] mt-[15px]  h-[317px] overflow-hidden rounded-[3px] lg:mx-0 -ml-8 lg:mt-0 lg:h-[1080px] lg:rounded-[9px]">
           <img
             src={LIFESTYLE_IMAGE_URL}
             alt="Man carrying a leather bag while wearing a linen shirt and light denim"
@@ -39,12 +30,26 @@ style={{
               className="mt-2.5 inline-flex items-center font-dm-sans gap-2 bg-[#312f2c]/90 px-1.5 py-1.5 text-[8px] font-light text-white transition-colors hover:bg-[#1f1e1c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:mt-5 lg:gap-3 lg:px-4 lg:py-2.5 lg:text-lg font-dam-sans"
             >
               Discover Collection
-              <span aria-hidden="true" className="text-[8px] leading-none  lg:text-xl">→</span>
+             <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
+          >
+            <path
+              d="M6 3.5L10.5 8L6 12.5"
+              stroke="currentColor"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
             </a>
           </div>
         </article>
 
-        <article className="relative mx-[15px] h-[405px] overflow-hidden  -ml-8 md:ml-0 lg:mx-0 lg:h-[1233px] font-dm-sans"
+        <article className="relative mx-[15px] h-[405px] overflow-hidden  -ml-8 md:ml-0 lg:mx-0 lg:h-[1233px] font-dm-sans "
         >
           <img
             src={MANNEQUIN_IMAGE_URL}
@@ -74,8 +79,6 @@ style={{
           </div>
         </article>
       </div>
-
-
 
     </section>
   )

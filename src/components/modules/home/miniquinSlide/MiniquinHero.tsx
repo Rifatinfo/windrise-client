@@ -131,9 +131,10 @@ export function MiniquinHero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-warmwhite lg:pt-10"
-      style={{ background: 'radial-gradient(120% 100% at 50% 22%, #fffefd 0%, #f8f6f2 63%, #f0ede6 100%)' }}
-
+      className="relative w-full overflow-hidden bg-warmwhite"
+      style={{
+  background: "linear-gradient(180deg, #F3F0E8 0%, #FFFFFF 100%)",
+}}
       aria-roledescription="carousel"
       aria-label="Featured looks"
     >
@@ -156,7 +157,7 @@ export function MiniquinHero() {
         />
 
         {/* ---- Heading ---- */}
-        <header className="relative z-[150] px-6 pt-24 text-center sm:absolute sm:left-[10%] sm:top-[8.2%] sm:mt-20 sm:w-[870px] sm:max-w-[56vw] sm:px-0 sm:pt-0 sm:text-left">
+        <header className="relative z-[150] px-6 pt-24 text-center sm:absolute sm:left-[10%] sm:top-[8.2%]  lg:mt-10 sm:w-[870px] sm:max-w-[56vw] sm:px-0 sm:pt-0 sm:text-left">
           <h1 className="font-serif-display text-2xl leading-[1.05] tracking-[-0.035em] text-ink sm:text-5xl sm:leading-[0.93] lg:text-6xl">
             Designed for the moments
             <span className="block text-[#B3A08E]">you live every day.</span>

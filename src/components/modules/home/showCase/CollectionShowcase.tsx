@@ -54,7 +54,7 @@ export function CollectionShowcase() {
           <img
             src={MANNEQUIN_IMAGE_URL}
             alt="Mannequin in a gray sweatshirt and joggers"
-            className="absolute bottom-0 left-[19%] h-[364px]  lg:left-[17%] lg:h-[1230px]"
+            className="absolute bottom-0 left-[19%] h-[364px]  lg:left-[17%] lg:h-[1030px]"
           />
           <div className="absolute bottom-[122px] right-[36px] w-[92px] lg:bottom-[410px] lg:right-[56%] lg:w-[226px]">
             <h2 className="text-[14px] font-medium leading-none tracking-[-0.025em] text-black lg:text-[32px]">

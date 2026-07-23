@@ -10,7 +10,7 @@ export default function WindriseHero() {
   }}
 
     >
-      <div className="mx-auto flex flex-col px-6 pb-9 lg:pb-12 lg:-mt-14 md:-mt-14 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 lg:px-19 md:px-19">
+      <div className="mx-auto flex flex-col px-6 pb-9 lg:pb-16 lg:-mt-14 md:-mt-14 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 lg:px-19 md:px-19">
       {/* Image */}
       <div
         className="
@@ -32,21 +32,21 @@ export default function WindriseHero() {
       </div>
 
       {/* Text content */}
-      <div className="order-2 max-w-full pt-6 md:order-1 md:w-1/2 md:max-w-[460px] md:pt-0 lg:ml-50 md:ml-50">
+      <div className="order-2 max-w-full pt-6 md:order-1 md:w-1/2 md:max-w-[560px] md:pt-0 lg:ml-50 md:ml-50">
         <h1 className="mb-5 text-[22px] font-medium leading-[1.15] tracking-tight text-[#1C1B1A] sm:text-[32px] lg:text-[40px]">
           Simple forms
           <br />
           Endless versatility
         </h1>
 
-        <p className="mb-5 max-w-full text-[13.5px] leading-[1.7] text-[#7A7670] sm:mb-8 sm:max-w-[380px] sm:text-[15px]">
+        <p className="mb-5 max-w-full text-[13.5px] leading-[1.7] text-[#7A7670] sm:mb-8 lg:max-w-[580px] lg:text-[25px]">
           Designed with premium materials and refined craftsmanship, each
           piece reflects the simplicity, comfort and confidence of Windrise.
         </p>
 
         <Link
           href="#"
-          className="group inline-flex items-center gap-2  border-transparent pb-0.5 text-[13.5px] font-medium text-[#1C1B1A] transition-[gap] duration-200 hover:gap-3 hover:border-[#1C1B1A] sm:text-[15px]"
+          className="group inline-flex items-center gap-2  border-transparent pb-0.5 text-[13.5px] font-light  text-[#1C1B1A] transition-[gap] duration-200 hover:gap-3 hover:border-[#1C1B1A] sm:text-[15px] md:text-xl lg:text-xl"
         >
           Discover Collection
           <svg

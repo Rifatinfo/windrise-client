@@ -11,7 +11,7 @@ const DetailsContactSection = () => {
     >
       <div className="relative z-50">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="relative h-[248px] mb-20  md:mb-20  bg-[#f3f3ed] md:h-[417px] mt-30  md:mt-20 ">
+          <div className="relative h-[248px] mb-20  md:mb-20  bg-[linear-gradient(to_right,#F8F9F6_0%,#D7D5C9_100%)] md:h-[417px] mt-30  md:mt-20 ">
             <img
               src={OUTFIT_IMAGE_URL}
               alt="Windrise outfit with shirt, denim, loafers, and shopping bag"
@@ -45,7 +45,7 @@ const DetailsContactSection = () => {
             </h1>
           </div>
 
-          <div className="relative h-[349px]   px-[15px]  text-center lg:text-start  md:h-[417px] md:px-0 md:pt-[45px] md:mt-20 ">
+          <div className="relative h-[349px]   px-[15px] bg-[#FFFFFF] text-center lg:text-start  md:h-[417px]  md:px-0 md:pt-[45px] md:mt-20 ">
             <div className="md:ml-[66px] ">
               <h2
                 id="details-heading"
@@ -56,7 +56,7 @@ const DetailsContactSection = () => {
                 <br />
                 the details.
               </h2>
-              <p className="mt-[20px] max-w-[320px] text-[11px] leading-[140%] font-light  md:mt-[15px] md:max-w-[362px] md:text-[25px] lg:text-[25px]">
+              <p className="mt-[20px] max-w-[320px] text-[11px] leading-[140%] text-[#616161] md:mt-[15px] md:max-w-[462px] md:text-[25px] lg:text-[25px]">
                 Premium fabrics, refined construction and thoughtful details
                 define every Windrise essential.
               </p>
@@ -86,7 +86,7 @@ const DetailsContactSection = () => {
             <img
               src={SEATED_MODEL_IMAGE_URL}
               alt="Seated model wearing a white shirt and olive trousers"
-              className="absolute bottom-[-150px] left-[20px] z-10 md:h-auto h-[324px] w-[324px] md:bottom-[-255px] md:left-auto md:right-[11%] md:w-[549px]"
+              className="absolute bottom-[-150px] left-[20px] z-10 md:h-auto h-[324px] w-[324px] md:bottom-[-255px] md:left-auto md:right-[1%] md:w-[549px]"
             />
           </div>
         </div>
@@ -107,8 +107,8 @@ const DetailsContactSection = () => {
                 We’re here whenever you need us.
               </p>
             </div>
-            <div className="mx-auto max-w-[330px] sm:mx-0  lg:ml-40 ">
-              <p className="text-[11px] leading-[1.45] text-[#868686] md:text-[15px]">
+            <div className="mx-auto max-w-[430px]  sm:mx-0  lg:ml-40 ">
+              <p className="text-[11px]  text-[#868686] md:text-[15px] lg:text-xl lg:w-[450px]">
                 We believe in thoughtful connections. Reach out to our team for
                 styling advice, order inquiries or to learn more about the world
                 of Windrise.
@@ -129,7 +129,7 @@ const DetailsContactSection = () => {
             alt=""
             aria-hidden="true"
             draggable={false}
-            className="pointer-events-none absolute -bottom-[4%] left-1/2 lg:left- z-0 w-[100%] max-w-none -translate-x-1/2 select-none  sm:-bottom-[26%] lg:w-[78%]"
+            className="pointer-events-none absolute -bottom-[4%] left-1/2 lg:left-  z-0 w-[100%] max-w-none -translate-x-1/2 select-none  sm:-bottom-[26%] lg:w-[78%]"
           />
         </section>
       </div>

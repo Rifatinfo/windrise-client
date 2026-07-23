@@ -143,11 +143,11 @@ export function MiniquinHero() {
           className="pointer-events-none absolute left-1/2 top-[28%] lg:top-[26%] z-0 w-[80%] -mx-7 -translate-x-1/2 select-none sm:left-[-2%] sm:top-[26%] sm:w-[46%] sm:translate-x-0"
           aria-hidden="true"
         >
-          <img
+          {/* <img
             src="/assets/WRWatermark.png"
             alt=""
             className="block w-full sepia-[0.2]"
-          />
+          /> */}
         </div>
         <img
           src="https://cdn.magicpatterns.com/uploads/dhbGLHSMuu9HSs3nKXbDvm/W.svg"

@@ -65,7 +65,7 @@ export function Header() {
       <header
         onMouseLeave={scheduleCategoryClose}
         onMouseEnter={clearCloseTimer}
-        className={`fixed  inset-x-0 top-0 z-[9999] text-white font-dm-sans transition-[background-color,backdrop-filter] duration-300 ${hasScrolled || activeCategory ? 'bg-black/95 backdrop-blur-md' : 'bg-transparent'}`}
+        className={`fixed  inset-x-0 top-0 z-[9999] text-white font-dm-sans transition-[background-color,backdrop-filter] duration-300 ${hasScrolled || activeCategory ? 'bg-black backdrop-blur-md' : 'bg-transparent'}`}
       >
         <div className="mx-auto hidden h-20 w-full grid-cols-[200px_1fr_auto] items-center px-6  lg:px-20 md:px-20 lg:grid ">
           <WhiteLogo/>

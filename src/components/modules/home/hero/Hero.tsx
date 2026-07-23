@@ -136,7 +136,7 @@ export function Hero() {
       {/* Slide indicators */}
        
          <div
-        className="absolute bottom-6 md:bottom-12 left-1/2 z-20 flex -translate-x-1/2 items-center gap-5 lg:left-auto lg:right-18 lg:translate-x-0"
+        className="absolute bottom-6 md:bottom-14  left-1/2 z-20 flex -translate-x-1/2 items-center gap-5 lg:left-auto lg:right-18 lg:translate-x-0"
         role="tablist"
         aria-label="Hero slides"
         >

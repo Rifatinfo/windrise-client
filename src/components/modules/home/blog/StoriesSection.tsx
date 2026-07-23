@@ -93,7 +93,7 @@ export function StoriesSection() {
       className="w-full bg-[linear-gradient(180deg,#FFFFFF_0%,#F2F4F0_95%,#FFFFFF_100%)]"
       aria-labelledby="stories-heading"
     >
-      <div className="mx-auto flex flex-col px-6 py-9 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-6 lg:py-6 lg:px-19 md:px-19 lg:ml-50 md:ml-50">
+      <div className="mx-auto flex flex-col px-6 py-9 md:mt-16  lg:mt-16  md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20 md:py-6 lg:py-6 lg:px-19 md:px-19 lg:ml-50 md:ml-50">
         <div className="w-full shrink-0 md:w-[36%] lg:w-[550px] lg:pr-[70px]">
           <h2
             id="stories-heading"
@@ -104,7 +104,7 @@ export function StoriesSection() {
             every stitch.
           </h2>
 
-          <p className="mt-6 md:mt-8 lg:mt-10 text-[14px]  text-[#616161] md:text-[25px] lg:text-[25px] font-dm-sans">
+          <p className="mt-6 md:mt-8 lg:mt-10 text-[14px]   text-[#616161] md:text-[25px] lg:text-[25px] font-dm-sans">
             Discover thoughtful articles on craftsmanship, styling, fabrics and
             the ideas that shape the world of Windrise.
           </p>

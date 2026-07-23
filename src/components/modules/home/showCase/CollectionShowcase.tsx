@@ -79,7 +79,6 @@ export function CollectionShowcase() {
           </div>
         </article>
       </div>
-
     </section>
   )
 }
